@@ -13,7 +13,7 @@
 		914F46FE1A2255A8004A3E06 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 914F46FD1A2255A8004A3E06 /* Images.xcassets */; };
 		914F47011A2255A8004A3E06 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 914F46FF1A2255A8004A3E06 /* LaunchScreen.xib */; };
 		914F470D1A2255A8004A3E06 /* PullDownNavigationControllerSampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914F470C1A2255A8004A3E06 /* PullDownNavigationControllerSampleTests.swift */; };
-		914F47171A2255F8004A3E06 /* PullDownNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914F47161A2255F8004A3E06 /* PullDownNavigationController.swift */; };
+		914F47191A22A707004A3E06 /* PullDownNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914F47181A22A707004A3E06 /* PullDownNavigationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +37,7 @@
 		914F47061A2255A8004A3E06 /* PullDownNavigationControllerSampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PullDownNavigationControllerSampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		914F470B1A2255A8004A3E06 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		914F470C1A2255A8004A3E06 /* PullDownNavigationControllerSampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullDownNavigationControllerSampleTests.swift; sourceTree = "<group>"; };
-		914F47161A2255F8004A3E06 /* PullDownNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PullDownNavigationController.swift; sourceTree = "<group>"; };
+		914F47181A22A707004A3E06 /* PullDownNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PullDownNavigationController.swift; path = ../PullDownNavigationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +61,7 @@
 		914F46E81A2255A8004A3E06 = {
 			isa = PBXGroup;
 			children = (
+				914F47181A22A707004A3E06 /* PullDownNavigationController.swift */,
 				914F46F31A2255A8004A3E06 /* PullDownNavigationControllerSample */,
 				914F47091A2255A8004A3E06 /* PullDownNavigationControllerSampleTests */,
 				914F46F21A2255A8004A3E06 /* Products */,
@@ -81,7 +82,6 @@
 			children = (
 				914F46F61A2255A8004A3E06 /* AppDelegate.swift */,
 				914F46F81A2255A8004A3E06 /* ViewController.swift */,
-				914F47161A2255F8004A3E06 /* PullDownNavigationController.swift */,
 				914F46FA1A2255A8004A3E06 /* Main.storyboard */,
 				914F46FD1A2255A8004A3E06 /* Images.xcassets */,
 				914F46FF1A2255A8004A3E06 /* LaunchScreen.xib */,
@@ -217,7 +217,7 @@
 			files = (
 				914F46F91A2255A8004A3E06 /* ViewController.swift in Sources */,
 				914F46F71A2255A8004A3E06 /* AppDelegate.swift in Sources */,
-				914F47171A2255F8004A3E06 /* PullDownNavigationController.swift in Sources */,
+				914F47191A22A707004A3E06 /* PullDownNavigationController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -411,6 +411,7 @@
 				914F47121A2255A8004A3E06 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		914F47131A2255A8004A3E06 /* Build configuration list for PBXNativeTarget "PullDownNavigationControllerSampleTests" */ = {
 			isa = XCConfigurationList;
@@ -419,6 +420,7 @@
 				914F47151A2255A8004A3E06 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
