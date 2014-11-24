@@ -14,7 +14,6 @@
 		914F47011A2255A8004A3E06 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 914F46FF1A2255A8004A3E06 /* LaunchScreen.xib */; };
 		914F470D1A2255A8004A3E06 /* PullDownNavigationControllerSampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914F470C1A2255A8004A3E06 /* PullDownNavigationControllerSampleTests.swift */; };
 		914F47191A22A707004A3E06 /* PullDownNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914F47181A22A707004A3E06 /* PullDownNavigationController.swift */; };
-		914F47381A22A76A004A3E06 /* Curly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914F471D1A22A76A004A3E06 /* Curly.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +38,6 @@
 		914F470B1A2255A8004A3E06 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		914F470C1A2255A8004A3E06 /* PullDownNavigationControllerSampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullDownNavigationControllerSampleTests.swift; sourceTree = "<group>"; };
 		914F47181A22A707004A3E06 /* PullDownNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PullDownNavigationController.swift; path = ../PullDownNavigationController.swift; sourceTree = "<group>"; };
-		914F471D1A22A76A004A3E06 /* Curly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Curly.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,7 +61,6 @@
 		914F46E81A2255A8004A3E06 = {
 			isa = PBXGroup;
 			children = (
-				914F471A1A22A76A004A3E06 /* lib */,
 				914F47181A22A707004A3E06 /* PullDownNavigationController.swift */,
 				914F46F31A2255A8004A3E06 /* PullDownNavigationControllerSample */,
 				914F47091A2255A8004A3E06 /* PullDownNavigationControllerSampleTests */,
@@ -116,23 +113,6 @@
 				914F470B1A2255A8004A3E06 /* Info.plist */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		914F471A1A22A76A004A3E06 /* lib */ = {
-			isa = PBXGroup;
-			children = (
-				914F471B1A22A76A004A3E06 /* Curly */,
-			);
-			name = lib;
-			path = ../lib;
-			sourceTree = "<group>";
-		};
-		914F471B1A22A76A004A3E06 /* Curly */ = {
-			isa = PBXGroup;
-			children = (
-				914F471D1A22A76A004A3E06 /* Curly.swift */,
-			);
-			path = Curly;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,7 +216,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				914F46F91A2255A8004A3E06 /* ViewController.swift in Sources */,
-				914F47381A22A76A004A3E06 /* Curly.swift in Sources */,
 				914F46F71A2255A8004A3E06 /* AppDelegate.swift in Sources */,
 				914F47191A22A707004A3E06 /* PullDownNavigationController.swift in Sources */,
 			);
