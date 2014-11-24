@@ -14,14 +14,12 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        let v = UIView(frame: self.navigationController!.navigationBar.bounds)
+        let v = CrossView(frame: self.navigationController!.navigationBar.bounds)
         v.backgroundColor = UIColor.redColor()
-        
-        self.navigationItem.titleView = v
         
         v.frame = self.navigationController!.navigationBar.bounds
         
-        v.autoresizingMask = .FlexibleWidth | .FlexibleHeight
+        self.navigationItem.titleView = v
         
     }
     
