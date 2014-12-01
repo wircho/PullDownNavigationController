@@ -8,17 +8,6 @@
 
 import UIKit
 
-class CrossView : UIView {
-    override func drawRect(rect: CGRect) {
-        let ctx = UIGraphicsGetCurrentContext()
-        CGContextSetLineWidth(ctx, 5)
-        CGContextSetStrokeColorWithColor(ctx,UIColor.blackColor().CGColor)
-        CGContextMoveToPoint(ctx,0,0)
-        CGContextAddLineToPoint(ctx,self.bounds.size.width,self.bounds.size.height)
-        CGContextStrokePath(ctx)
-    }
-}
-
 class PullDownNavigationController: UINavigationController {
 
     var temporaryTitle:String!
@@ -108,7 +97,7 @@ class PullDownNavigationController: UINavigationController {
             let speed = min(2.0,max(0.1,fabs(velocity.y)))
             
             let springDuration:Double = 10
-            let springDamping:CGFloat = 0.5
+            let springDamping:CGFloat = 0.7
             
             if velocity.y > 0 || (velocity.y == 0 && open < closed) {
                 navigationBarOpen = true
@@ -123,11 +112,16 @@ class PullDownNavigationController: UINavigationController {
                 )
             } else {
                 let duration = min(0.5,springDuration * Double(closed / (open + closed)) / Double(speed))
+                
+                if let titleView = self.temporaryTitleView {
+                    titleView.autoresizingMask = .FlexibleBottomMargin | .FlexibleRightMargin
+                }
+                
                 UIView.animateWithDuration(duration, delay: 0, usingSpringWithDamping: springDamping, initialSpringVelocity: speed, options: .CurveLinear,
                     animations: { () -> Void in
-                        
-                        self.navigationBar.frame = self.initialNavigationBarFrame
-                        
+                        if let titleView = self.temporaryTitleView {
+                            titleView.frame = self.initialTitleViewFrame
+                        }
                     },
                     completion: {
                         [weak self]
@@ -138,39 +132,22 @@ class PullDownNavigationController: UINavigationController {
                                 if let navItem = s.navigationBar.items.last as? UINavigationItem {
                                     navItem.leftBarButtonItem = s.temporaryLeftItem
                                     navItem.rightBarButtonItem = s.temporaryRightItem
-                                    
-                                    if let titleView = s.temporaryTitleView {
-                                        weak var weakNavTitem = navItem
-                                        weak var weakS = s
-                                        UIView.animateWithDuration(0.1,
-                                            animations: { () -> Void in
-                                                titleView.frame = s.initialTitleViewFrame
-                                            },
-                                            completion: {
-                                                [weak titleView]
-                                                (finished:Bool) -> Void in
-                                                if finished {
-                                                    if let s0 = weakS {
-                                                        if let ni = weakNavTitem {
-                                                            if let tv = titleView {
-                                                                s0.navigationBarOpen = false
-                                                                tv.removeFromSuperview()
-                                                                ni.titleView = tv
-                                                            }
-                                                        }
-                                                    }
-                                                }
-                                            }
-                                        )
-                                    
-                                    } else {
-                                        s.navigationBarOpen = false
-                                    }
+                                    s.navigationBarOpen = false
+                                    navItem.titleView = s.temporaryTitleView
                                 }
                             }
                             
                         }
                     }
+                )
+                
+                UIView.animateWithDuration(duration, delay: 0, usingSpringWithDamping: springDamping, initialSpringVelocity: speed, options: .CurveLinear,
+                    animations: { () -> Void in
+                        
+                        self.navigationBar.frame = self.initialNavigationBarFrame
+                        
+                    },
+                    completion: nil
                 )
             }
             

@@ -22,8 +22,23 @@ class ViewController: UIViewController {
         self.navigationItem.titleView = v
         
     }
-    
-    
 
+}
+
+class CrossView : UIView {
+    override func drawRect(rect: CGRect) {
+        let ctx = UIGraphicsGetCurrentContext()
+        
+        CGContextSetLineWidth(ctx, 1)
+        CGContextSetStrokeColorWithColor(ctx,UIColor.blackColor().CGColor)
+        
+        CGContextMoveToPoint(ctx,0,0)
+        CGContextAddLineToPoint(ctx,self.bounds.size.width,self.bounds.size.height)
+        CGContextStrokePath(ctx)
+        
+        CGContextMoveToPoint(ctx,self.bounds.size.width,0)
+        CGContextAddLineToPoint(ctx,0,self.bounds.size.height)
+        CGContextStrokePath(ctx)
+    }
 }
 
