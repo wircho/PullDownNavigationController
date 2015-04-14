@@ -43,7 +43,7 @@ class PullDownNavigationController: UINavigationController {
                 
                 initialNavigationBarFrame = self.navigationBar.frame
                 
-                let navItem = self.navigationBar.items.last! as UINavigationItem
+                let navItem = self.navigationBar.items.last! as! UINavigationItem
                 
                 temporaryTitle = navItem.title
                 navItem.title = nil
